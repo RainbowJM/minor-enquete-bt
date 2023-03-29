@@ -29,18 +29,18 @@
         <section>
             <nav>
                 <a href="./mp.html" rel="prev">Previous</a>
-             </nav>
+            </nav>
         </section>
     </header>
 
     <main>
-        <form>
+        <form action="">
             <fieldset>
                 <h2>Course 8 - Weekly Nerd</h2>
                 <p>Teachers: <b>Vasilis van Gemert</b>, <b>Robert Spier</b></p>
 
-                <h3>General question about Meeesterproef</h3>
                 <fieldset>
+                    <legend>General</legend>
                     <label for="wn-question-1">How good was this course?</label><br>
                     <select name="wn-question-1" id="wn-question-1">
                         <option value="1">1</option>
@@ -54,49 +54,38 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                    <br>
-                    <fieldset>
-                        <legend>In which semester did you follow this course?</legend>
-                        <p>Week 36 to week 5 (semester 1) or week 6 to week 26 (semester 2)</p>
-                        <select name="wn-semester-option" id="wn-semester-option">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                    </fieldset>
+                    <br><br>
+                    <p>In which semester did you follow this course?</p>
+                    <p>Week 36 to week 5 (semester 1) or week 6 to week 26 (semester 2)</p>
+                    <select name="wn-semester-option" id="wn-semester-option">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
                 </fieldset>
 
                 <fieldset>
-                    <h2>Course 8 - Weekly Nerd</h2>
-                    <p>Teachers: <b>Vasilis van Gemert</b>, <b>Robert Spier</b></p>
-
-                    <h3>Curriculum</h3>
-                    <fieldset>
-                        <legend>What number would you give the difficulty of the curriculum?</legend>
-                        <ul>
-                            <li><label><input type="radio" name="wn-curriculum">1</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">2</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">3</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">4</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">5</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">6</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">7</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">8</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">9</label></li>
-                            <li><label><input type="radio" name="wn-curriculum">10</label></li>
-                        </ul>
-                    </fieldset>
+                    <legend>Curriculum</legend>
+                    <p>What number would you give the difficulty of the curriculum?</p>
+                    <ul>
+                        <li><label><input type="radio" name="wn-curriculum">1</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">2</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">3</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">4</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">5</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">6</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">7</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">8</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">9</label></li>
+                        <li><label><input type="radio" name="wn-curriculum">10</label></li>
+                    </ul>
                     <br>
                     <label for="wn-opinion">Give you opinion about the course</label><br>
                     <textarea name="wn-opinion" id="wn-opinion" cols="80" rows="5"></textarea>
                 </fieldset>
 
                 <fieldset>
-                    <h2>Course 8 - Weekly Nerd</h2>
-                    <p>Teachers: <b>Vasilis van Gemert</b>, <b>Robert Spier</b></p>
-
-                    <h3>Curriculum Explanation</h3>
-                    <fieldset>
-                        <legend>What number would you give curriculum explanation?</legend>
+                    <legend>Curriculum Explanation</legend>
+                        <p>What number would you give curriculum explanation?</p>
                         <ul>
                             <li><label><input type="radio" name="wn-curriculum-explanation">1</label></li>
                             <li><label><input type="radio" name="wn-curriculum-explanation">2</label></li>
@@ -109,11 +98,25 @@
                             <li><label><input type="radio" name="wn-curriculum-explanation">9</label></li>
                             <li><label><input type="radio" name="wn-curriculum-explanation">10</label></li>
                         </ul>
-                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Insight</legend>
+                    <p>How good did you understand this course?</p>
+                    <ul>
+                        <li><label><input type="radio" name="wn-insight">1</label></li>
+                        <li><label><input type="radio" name="wn-insight">2</label></li>
+                        <li><label><input type="radio" name="wn-insight">3</label></li>
+                        <li><label><input type="radio" name="wn-insight">4</label></li>
+                        <li><label><input type="radio" name="wn-insight">5</label></li>
+                        <li><label><input type="radio" name="wn-insight">6</label></li>
+                        <li><label><input type="radio" name="wn-insight">7</label></li>
+                        <li><label><input type="radio" name="wn-insight">8</label></li>
+                        <li><label><input type="radio" name="wn-insight">9</label></li>
+                        <li><label><input type="radio" name="wn-insight">10</label></li>
+                    </ul>
                 </fieldset>
             </fieldset>
-            <button type="submit">Vorige</button>
-            <button type="submit">Volgende</button>
         </form>
     </main>
 </body>
