@@ -141,7 +141,7 @@ form>fieldset {
     display: flex;
     flex-direction: column;
     gap: .5em;
-    /* margin: 1em .5em;     */
+    margin: 1em .5em;    
     border: transparent;
 }
 
