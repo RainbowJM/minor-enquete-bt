@@ -146,10 +146,6 @@ form>fieldset {
     align-items: center;
 }
 
-textarea {
-    width: 100%;
-}
-
 input {
     background-color: white;
 }
