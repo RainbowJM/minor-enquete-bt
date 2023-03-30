@@ -4,15 +4,237 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-type: 'Open Sans', 'Arial', 'Helvatica', sans-serif;
+    --font-size-title: 2em;
+    --font-size: 0.5em;
+
+    --background-color: #87C8FB;
+    --button-color: #62BAFF;
+    --text-color: #2ea4ff;
+
+    --valid: green;
+    --invalid: red;
+}
+
+body {
+    background-color: white;
+    font-family: var(--font-type);
+    font-weight: 400;
+    margin: 1em;
+}
+
+header nav ol {
+    display: flex;
+}
+
 main {
     width: 100%;
 }
 
+form {
+    /* background-color: var(--background-color);
+    background-color: #87C8FB;
+    font-family: var(--font-type);
+    font-weight: 400;
+    margin: 1em; */
+}
 
-form > fieldset {
-    margin: 2em 1em;
+form>fieldset {
+    /* margin: 2em 1em; */
+    border: transparent;
+
+}
+
+fieldset {
+    /* border: transparent; */
 }
 
 textarea {
     width: 100%;
+}
+
+br {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+input[type="radio"] {
+    appearance: none;
+}
+
+
+legend {
+    font-family: var(--font-type);
+    font-weight: bold;
+    font-size: clamp(1em, 2vw, 2em);
+    margin-bottom: .5em;
+    color: purple;
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+
+/* form>fieldset fieldset:first-of-type {
+    border-bottom: 3px solid black;
+    padding-bottom: 1em;
+} */
+
+button {
+    font-size: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    border-radius: 2em;
+}
+
+@supports (display:grid) {
+    form {
+        display: grid;
+        place-items: center;
+        width: 100%;
+    }
+}
+
+form>fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 1em .5em;
+}
+
+textarea {
+    width: 100%;
+}
+
+input {
+    background-color: white;
+}
+
+input[type="text"] {
+    padding: 1em;
+}
+
+input[type="radio"] {
+    position: absolute;
+    appearance: none;
+    opacity: 0;
+    /* left: -1000em; */
+
+}
+
+input:checked+span {
+    display: inline-block;
+    background-color: black;
+}
+
+form>fieldset>fieldset:nth-of-type(n+2) ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form>fieldset>fieldset:nth-of-type(n+2) ul li label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form>fieldset>fieldset:nth-of-type(n+2) span {
+    padding: .5em;
+    width: 2em;
+    height: 2em;
+}
+
+
+/* De vragen */
+/* form>fieldset fieldset p,
+form>fieldset>fieldset>label {
+    color: var(--font-size-paragraaf);
+    margin-bottom: 1em;
+} */
+
+/* body form  fieldset:nth-child(1) > fieldset :has(input[type="radio"]:checked)  {
+ /* padding: 1em; */
+/* background-color: var(--main-kleur); 
+}*/
+
+
+#general fieldset {
+    gap: 1em;
+
+}
+
+label[for="name"],
+label[for="snummer"],
+label[for="email"] {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+
+input[type="tel"],
+input[type="email"] {
+    padding: 1em;
+}
+
+input[type="email"]:invalid {
+    border: 1px solid var(--invalid);
+}
+
+input[type="email"]:valid {
+    border: 1px solid var(--valid);
+}
+
+input:required {
+    border: 1px solid var(--invalid);
+}
+
+form>ul {
+    display: flex;
+    align-self: center;
+}
+
+@supports (position: sticky) {
+    form>ul {
+        position: sticky;
+        position: -webkit-sticky;
+        bottom: 0;
+
+    }
+}
+
+/* Volgende Button */
+/* button[type="submit"] {
+    border: 1px solid var(--button-kleur);
+    padding: 1em 1.5em;
+    background-color: var(--button-kleur);
+    color: var(--form-achtergrond-kleur);
+    font-family: var(--font-size-paragraaf);
+
+} */
+
+/* Vorige button */
+/* a.vorige-btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    color: var(--tekst-kleur);
+    border: 1px solid var(--button-kleur);
+    background-color: var(--form-achtergrond-kleur);
+    text-decoration: none;
+} */
+
+@media (min-width: 30em) {
+    main {
+        margin: 0 auto;
+        width: 50%;
+    }
 }
