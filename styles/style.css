@@ -56,14 +56,6 @@ main {
     width: 100%;
 }
 
-form {
-    /* background-color: var(--background-color);
-    background-color: #87C8FB;
-    font-family: var(--font-type);
-    font-weight: 400;
-    margin: 1em; */
-}
-
 fieldset {
     border: 1px solid var(--text-color);
 }
