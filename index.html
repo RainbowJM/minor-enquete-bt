@@ -14,41 +14,36 @@
 <body>
     <header>
         <section>
-            <ol>
-                <li>General</li>
-                <li>Course 1</li>
-                <li>Course 2</li>
-                <li>Course 3</li>
-                <li>Course 4</li>
-                <li>Course 5</li>
-                <li>Course 6</li>
-                <li>Course 7</li>
-                <li>Course 8</li>
-            </ol>
-        </section>
-        <section>
             <nav>
-                <a href="/index.html" rel="prev">Previous</a>
-                <a href="./html/wafs.html" rel="next">Next</a>
-             </nav>
+                <ol>
+                    <li><a href="index.html">General</a></li>
+                    <li><a href="./html/wafs.html">Course 1</a></li>
+                    <li><a href="./html/cssttr.html">Course 2</a></li>
+                    <li><a href="./html/bt.html">Course 3</a></li>
+                    <li><a href="./html/pwa.html">Course 4</a></li>
+                    <li><a href="./html/rtw.html">Course 5</a></li>
+                    <li><a href="./html/hcd.html">Course 6</a></li>
+                    <li><a href="./html/mp.html">Course 7</a></li>
+                    <li><a href="./html/wn.html">Course 8</a></li>
+                </ol>
+            </nav>
         </section>
     </header>
 
     <main>
         <h1>Minor Web Design & Development Enquête</h1>
-        <form>
+        <form action="./html/wafs.html">
             <fieldset>
-                <label for="name">Name*
-                    <br><input type="text" id="name" name="name" placeholder="Name..." aria-required="true"
-                        aria-label="required" required><br>
+                <label for="name">Name
+                    <br><input type="text" id="name" name="name" placeholder="Name..." required><br>
                 </label><br>
 
-                <label for="snumber">Student number*
-                    <input type="text" id="snumber" name="snumber" placeholder="Number..." required><br>
+                <label for="snumber">Student number
+                    <br><input type="tel" id="snumber" name="snumber" placeholder="Number..." minlength="1" maxlength="9" required><br>
                 </label><br>
 
-                <label for="email">Email*
-                    <input type="text" id="email" name="email" placeholder="Email.."><br><br>
+                <label for="email">Email
+                    <br><input type="email" id="email" name="email" placeholder="Email.." required><br><br>
                 </label><br>
                 <input type="submit" value="Submit">
             </fieldset>
