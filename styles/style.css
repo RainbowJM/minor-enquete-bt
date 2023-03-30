@@ -70,6 +70,10 @@ fieldset {
 
 textarea {
     width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f8f86a;
+    font-size: 16px;  
 }
 
 li {
@@ -85,6 +89,7 @@ input[type="radio"] {
     appearance: none;
 }
 
+
 legend {
     font-family: var(--font-type);
     font-weight: bold;
@@ -92,6 +97,7 @@ legend {
     margin-bottom: .5em;
     color: black;
     font-size: 1.5em;
+    margin-left: .1em;
 }
 
 h2 {
@@ -169,6 +175,10 @@ input[type="radio"] {
 input:checked+span {
     display: inline-block;
     background-color: var(--button-color);
+}
+
+input::placeholder{
+    font-family: var(--font-type);
 }
 
 form>fieldset>fieldset:nth-of-type(n+2) ul {
