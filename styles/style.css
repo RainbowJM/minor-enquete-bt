@@ -24,9 +24,33 @@ body {
     margin: 1em;
 }
 
-header nav ol {
-    display: flex;
+header {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
+
+header section {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+header nav ol{
+    font-size: 0.65em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    gap: 0.3em;
+}
+
 
 main {
     width: 100%;
@@ -40,50 +64,52 @@ form {
     margin: 1em; */
 }
 
-form>fieldset {
-    /* margin: 2em 1em; */
-    border: transparent;
-
-}
-
 fieldset {
-    /* border: transparent; */
+    border: 1px solid var(--text-color);
 }
 
 textarea {
     width: 100%;
 }
 
-br {
-    display: none;
-}
-
 li {
     list-style: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 input[type="radio"] {
     appearance: none;
 }
 
-
 legend {
     font-family: var(--font-type);
     font-weight: bold;
     font-size: clamp(1em, 2vw, 2em);
     margin-bottom: .5em;
-    color: purple;
+    color: black;
+    font-size: 1.5em;
 }
 
 h2 {
     color: var(--text-color);
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
 }
 
+form>fieldset>p {
+    display: flex;
+    justify-content: center;
+}
 
-/* form>fieldset fieldset:first-of-type {
-    border-bottom: 3px solid black;
-    padding-bottom: 1em;
-} */
+b {
+    margin-left: .3em;
+    margin-right: .3em;
+}
 
 button {
     font-size: 1em;
@@ -94,6 +120,7 @@ form {
     flex-direction: column;
     background-color: var(--background-color);
     border-radius: 2em;
+    box-shadow: 4px 4px 10px #4585b6;
 }
 
 @supports (display:grid) {
@@ -107,8 +134,18 @@ form {
 form>fieldset {
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    margin: 1em .5em;
+    gap: .5em;
+    margin: 1em .5em;    
+    border: transparent;
+}
+
+#general {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin: 1em .5em;    
+    border: transparent;
+    align-items: center;
 }
 
 textarea {
@@ -127,13 +164,11 @@ input[type="radio"] {
     position: absolute;
     appearance: none;
     opacity: 0;
-    /* left: -1000em; */
-
 }
 
 input:checked+span {
     display: inline-block;
-    background-color: black;
+    background-color: var(--button-color);
 }
 
 form>fieldset>fieldset:nth-of-type(n+2) ul {
@@ -186,16 +221,14 @@ input[type="email"] {
     padding: 1em;
 }
 
-input[type="email"]:invalid {
-    border: 1px solid var(--invalid);
-}
-
-input[type="email"]:valid {
-    border: 1px solid var(--valid);
-}
-
+input[type="email"]:invalid,
 input:required {
-    border: 1px solid var(--invalid);
+    border: 2px solid var(--invalid);
+}
+
+input[type="email"]:valid,
+input[type="text"]:valid{
+    border: 2px solid var(--valid);
 }
 
 form>ul {
@@ -208,29 +241,27 @@ form>ul {
         position: sticky;
         position: -webkit-sticky;
         bottom: 0;
-
     }
 }
 
-/* Volgende Button */
-/* button[type="submit"] {
-    border: 1px solid var(--button-kleur);
+
+button[type="submit"] {
+    border: 1px solid var(--button-color);
     padding: 1em 1.5em;
-    background-color: var(--button-kleur);
-    color: var(--form-achtergrond-kleur);
-    font-family: var(--font-size-paragraaf);
+    background-color: var(--button-color);
+    color: black;
+    font-family: var(--font-type);
 
-} */
+}
 
-/* Vorige button */
-/* a.vorige-btn {
+a.prev-btn {
     display: inline-block;
     padding: 1em 1.5em;
     color: var(--tekst-kleur);
     border: 1px solid var(--button-kleur);
     background-color: var(--form-achtergrond-kleur);
     text-decoration: none;
-} */
+}
 
 @media (min-width: 30em) {
     main {

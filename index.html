@@ -31,11 +31,11 @@
     </header>
 
     <main>
-        <h1>Minor Web Design & Development Enquête</h1>
         <form action="./html/wafs.html">
             <fieldset id="general">
+                <h2>Minor Web Design & Development Enquête</h2>
                 <label for="name">Name
-                    <br><input type="text" id="name" name="name" placeholder="Name..." required><br>
+                    <input type="text" id="name" name="name" placeholder="Name..." required><br>
                 </label><br>
 
                 <label for="snumber">Student number
@@ -43,10 +43,12 @@
                 </label><br>
 
                 <label for="email">Email
-                    <br><input type="email" id="email" name="email" placeholder="Email.." required><br><br>
+                    <input type="email" id="email" name="email" placeholder="Email.." pattern="[a-zA-Z0-9._-]*@[a-zA-Z]*\.[a-zA-Z]{2,3}" required><br><br>
                 </label><br>
-                <input type="submit" value="Submit">
             </fieldset>
+            <ul>
+                <li><button class="volgende" type="submit" value="button">Next</button></li>
+            </ul>
         </form>
     </main>
 </body>
