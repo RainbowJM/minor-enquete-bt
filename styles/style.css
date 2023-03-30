@@ -188,20 +188,6 @@ form>fieldset>fieldset:nth-of-type(n+2) span {
     height: 2em;
 }
 
-
-/* De vragen */
-/* form>fieldset fieldset p,
-form>fieldset>fieldset>label {
-    color: var(--font-size-paragraaf);
-    margin-bottom: 1em;
-} */
-
-/* body form  fieldset:nth-child(1) > fieldset :has(input[type="radio"]:checked)  {
- /* padding: 1em; */
-/* background-color: var(--main-kleur); 
-}*/
-
-
 #general fieldset {
     gap: 1em;
 
@@ -214,7 +200,6 @@ label[for="email"] {
     flex-direction: column;
     padding: 1em;
 }
-
 
 input[type="tel"],
 input[type="email"] {
