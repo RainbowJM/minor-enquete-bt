@@ -214,19 +214,10 @@ input[type="text"]:valid{
     border: 2px solid var(--valid);
 }
 
-form>ul {
+form section>ul {
     display: flex;
     align-self: center;
 }
-
-@supports (position: sticky) {
-    form>ul {
-        position: sticky;
-        position: -webkit-sticky;
-        bottom: 0;
-    }
-}
-
 
 button[type="submit"] {
     border: 1px solid var(--button-color);
@@ -234,19 +225,19 @@ button[type="submit"] {
     background-color: var(--button-color);
     color: black;
     font-family: var(--font-type);
-
 }
 
-a.prev-btn {
+a.previous {
     display: inline-block;
     padding: 1em 1.5em;
-    color: var(--tekst-kleur);
-    border: 1px solid var(--button-kleur);
-    background-color: var(--form-achtergrond-kleur);
+    color: black;
+    border: 1px solid var(--button-color);
+    background-color: var(--button-color);
     text-decoration: none;
+    font-family: var(--font-type);
 }
 
-@media (min-width: 30em) {
+@media (min-width: 40em) {
     main {
         margin: 0 auto;
         width: 50%;

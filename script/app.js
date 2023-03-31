@@ -1,16 +1,26 @@
 const inputs = document.querySelectorAll("input[type='text'], input[type='email']");
+const inputRadios = document.querySelectorAll("input[type='radio']")
 const question_1 = document.getElementById("question-1");
 const question_2 = document.getElementById("question-2");
 
+
 loadInput();
-loadValueOfSelect(question_1);
-loadValueOfSelect(question_2);
-saveValueOfSelect(question_1);
-saveValueOfSelect(question_2);
+loadRadioValue();
 
 inputs.forEach(input => {
     input.addEventListener('input', saveInput);
 });
+
+inputRadios.forEach(radio => {
+    radio.addEventListener('change', saveRadioValue);
+})
+
+if (question_1 && question_2) {
+    loadValueOfSelect(question_1);
+    loadValueOfSelect(question_2);
+    saveValueOfSelect(question_1);
+    saveValueOfSelect(question_2);
+}
 
 function saveInput() {
     inputs.forEach(input => {
@@ -47,3 +57,22 @@ function loadValueOfSelect(input) {
     }
 }
 
+function saveRadioValue(){
+    inputRadios.forEach(radio => {
+        const radioName = radio.name;
+        const radioValue = radio.value;
+        if (radio.checked) {
+            localStorage.setItem(radioName, radioValue)
+        }
+    })
+}
+
+function loadRadioValue() {
+    inputRadios.forEach(input => {
+        const radioName = input.name;
+        let storedValue = localStorage.getItem(radioName);
+        if (storedValue && input.value === storedValue) {
+            input.checked = true;
+        }
+    });
+}
