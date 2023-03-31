@@ -1,25 +1,49 @@
-const formInputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+const inputs = document.querySelectorAll("input[type='text'], input[type='email']");
+const question_1 = document.getElementById("question-1");
+const question_2 = document.getElementById("question-2");
 
-loadInputLocal();
+loadInput();
+loadValueOfSelect(question_1);
+loadValueOfSelect(question_2);
+saveValueOfSelect(question_1);
+saveValueOfSelect(question_2);
 
-formInputs.forEach(input => {
-    input.addEventListener('input', saveInputLocal);
+inputs.forEach(input => {
+    input.addEventListener('input', saveInput);
 });
 
-function saveInputLocal() {
-    formInputs.forEach(input => {
-    const inputName = input.name; 
-    const inputValue = input.value; 
-    localStorage.setItem(inputName, inputValue); 
-});
+function saveInput() {
+    inputs.forEach(input => {
+        const inputName = input.name;
+        const inputValue = input.value;
+        localStorage.setItem(inputName, inputValue);
+    });
 }
 
-function loadInputLocal() {
-    formInputs.forEach(input => {
+function loadInput() {
+    inputs.forEach(input => {
         const inputName = input.name;
         let storedValue = localStorage.getItem(inputName);
-        if(storedValue){
+        if (storedValue) {
             input.value = storedValue
         }
     });
 }
+
+function saveValueOfSelect(input) {
+    input.addEventListener('change', function () {
+        const selectName = this.name;
+        const selectValue = this.value
+        localStorage.setItem(selectName, selectValue);
+    })
+}
+
+function loadValueOfSelect(input) {
+    const selectName = input.name;
+    let storedSelectValue = localStorage.getItem(selectName);
+
+    if (storedSelectValue) {
+        input.value = storedSelectValue
+    }
+}
+
