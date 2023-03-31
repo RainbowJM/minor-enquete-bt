@@ -2,10 +2,11 @@ const inputs = document.querySelectorAll("input[type='text'], input[type='email'
 const inputRadios = document.querySelectorAll("input[type='radio']")
 const question_1 = document.getElementById("question-1");
 const question_2 = document.getElementById("question-2");
-
+const textarea = document.getElementById("wafs-opinion");
 
 loadInput();
 loadRadioValue();
+loadValueTextarea();
 
 inputs.forEach(input => {
     input.addEventListener('input', saveInput);
@@ -14,6 +15,8 @@ inputs.forEach(input => {
 inputRadios.forEach(radio => {
     radio.addEventListener('change', saveRadioValue);
 })
+
+textarea.addEventListener('input', saveValueTextarea);
 
 if (question_1 && question_2) {
     loadValueOfSelect(question_1);
@@ -75,4 +78,19 @@ function loadRadioValue() {
             input.checked = true;
         }
     });
+}
+
+function saveValueTextarea() {
+    console.log(textarea.value)
+    const textareaName = textarea.name;
+    const textareaValue = textarea.value;
+    localStorage.setItem(textareaName, textareaValue);
+}
+
+function loadValueTextarea() {
+    const textareaName = textarea.name;
+    let storedValue = localStorage.getItem(textareaName);
+    if (storedValue) {
+        textarea.value = storedValue;
+    }
 }
