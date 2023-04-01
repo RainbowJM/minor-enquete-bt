@@ -188,7 +188,6 @@ form>fieldset>fieldset:nth-of-type(n+2) span {
 
 #general fieldset {
     gap: 1em;
-
 }
 
 label[for="name"],
