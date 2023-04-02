@@ -264,7 +264,11 @@ button:focus {
     cursor: pointer;
 }
 ```
-
+Also you have `tabindex`
+```html
+<p tabindex="0">In which semester did you follow this course?</p>
+<p tabindex="0">Week 42 to week 44 (semester 1) or week 12 to week 14 (semester 2)</p>
+```
 ### Source
 - [Principes](https://www.w3.org/DesignIssues/Principles.html)
 - [Het web is voor iedereen](https://www.youtube.com/watch?v=UMNFehJIi0E)
