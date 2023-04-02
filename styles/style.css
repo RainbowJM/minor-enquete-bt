@@ -10,6 +10,7 @@
     --font-size: 0.5em;
 
     --background-color: #87C8FB;
+    --blue-color: #2083cf;
     --button-color: #62BAFF;
     --text-color: #2ea4ff;
 
@@ -260,6 +261,15 @@ button[type="submit"] {
     font-family: var(--font-type);
 }
 
+button:hover,
+button:focus {
+    outline-style: inset;
+    outline-width: 3px;
+    outline-color: var(--text-color);
+    color: var(--blue-color);
+    cursor: pointer;
+}
+
 a.previous {
     display: inline-block;
     padding: 1em 1.5em;
@@ -268,6 +278,15 @@ a.previous {
     background-color: var(--button-color);
     text-decoration: none;
     font-family: var(--font-type);
+}
+
+a.previous:hover,
+a.previous:focus {
+    outline-style: inset;
+    outline-width: 3px;
+    outline-color: var(--text-color);
+    color: var(--blue-color);
+    opacity: 1;
 }
 
 @media (min-width: 40em) {
