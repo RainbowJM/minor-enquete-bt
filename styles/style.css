@@ -42,7 +42,7 @@ nav {
     text-align: right;
 }
 
-header nav ol{
+header nav ol {
     font-size: 0.65em;
     display: flex;
     flex-direction: row;
@@ -65,7 +65,7 @@ textarea {
     border: none;
     border-radius: 4px;
     background-color: #f8f8f86a;
-    font-size: 16px;  
+    font-size: 16px;
 }
 
 li {
@@ -77,11 +77,6 @@ a {
     text-decoration: none;
 }
 
-input[type="radio"] {
-    appearance: none;
-}
-
-
 legend {
     font-family: var(--font-type);
     font-weight: bold;
@@ -90,6 +85,13 @@ legend {
     color: black;
     font-size: 1.5em;
     margin-left: .1em;
+}
+
+select {
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background: var(--text-color);
 }
 
 h2 {
@@ -133,7 +135,7 @@ form>fieldset {
     display: flex;
     flex-direction: column;
     gap: .5em;
-    margin: 1em .5em;    
+    margin: 1em .5em;
     border: transparent;
 }
 
@@ -141,9 +143,17 @@ form>fieldset {
     display: flex;
     flex-direction: column;
     gap: .5em;
-    margin: 1em .5em;    
+    margin: 1em .5em;
     border: transparent;
     align-items: center;
+}
+
+#general label input[type="text"]:valid+span::after {
+    content: 'Nice! You did it!';
+    position: absolute;
+    transform: translateY(.5em);
+    font-size: 14px;
+    font-weight: bold;
 }
 
 input {
@@ -165,7 +175,7 @@ input:checked+span {
     background-color: var(--button-color);
 }
 
-input::placeholder{
+input::placeholder {
     font-family: var(--font-type);
 }
 
@@ -209,13 +219,36 @@ input:required {
 }
 
 input[type="email"]:valid,
-input[type="text"]:valid{
+input[type="text"]:valid {
     border: 2px solid var(--valid);
 }
 
 form section>ul {
     display: flex;
     align-self: center;
+}
+
+progress {
+    margin-left: 4em;
+    border-radius: 7px;
+    width: 450px;
+    height: 20px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(245, 222, 179, 0.281);
+    border-radius: 7px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--text-color);
+    border-radius: 7px;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--text-color);
+    border-radius: 7px;
 }
 
 button[type="submit"] {

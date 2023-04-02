@@ -1,5 +1,5 @@
 const inputs = document.querySelectorAll("input[type='text'], input[type='email']");
-const inputRadios = document.querySelectorAll("input[type='radio']")
+const inputRadios = document.querySelectorAll("input[type='radio']");
 const question_1 = document.getElementById("question-1");
 const question_2 = document.getElementById("question-2");
 const inputTextarea = document.getElementById("question-4");
@@ -14,7 +14,7 @@ inputs.forEach(input => {
 
 inputRadios.forEach(radio => {
     radio.addEventListener('change', saveRadioValue);
-})
+});
 
 inputTextarea.addEventListener('input', saveValueTextarea);
 
@@ -67,7 +67,7 @@ function saveRadioValue(){
         if (radio.checked) {
             localStorage.setItem(radioName, radioValue)
         }
-    })
+    });
 }
 
 function loadRadioValue() {
