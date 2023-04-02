@@ -229,6 +229,7 @@ form section>ul {
 }
 
 progress {
+    margin-right: 1em;
     margin-left: 4em;
     border-radius: 7px;
     width: 450px;
