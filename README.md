@@ -253,7 +253,17 @@ Implementations usage:
 - Space bar
 - Arrow keys
 
---- focus stage----
+To make it more visual, `:focus` and `:hover` was used to outline it
+```css
+button:hover,
+button:focus {
+    outline-style: inset;
+    outline-width: 3px;
+    outline-color: var(--text-color);
+    color: var(--blue-color);
+    cursor: pointer;
+}
+```
 
 ### Source
 - [Principes](https://www.w3.org/DesignIssues/Principles.html)
