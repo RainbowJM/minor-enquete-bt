@@ -48,11 +48,11 @@ Another aspect that could have been taken was, that you can fill the enquête as
 - [ ] Fill the enquête as anonouymous
 
 ### Browser
+--- what works/ what does not ---
 - Safari iphone
 - Safari mac
 - Samsung internet mobile
 - Google chrome desktop
-- Google chrome mobile
 - PrinceXML 
 
 #### CSS Selector
@@ -189,10 +189,13 @@ For the navigation part you will be able to go to the previous answered forms an
 
 <img width="253" alt="Screenshot 2023-04-02 at 22 50 50" src="https://user-images.githubusercontent.com/59873140/229378353-d5fb2b62-0638-4a35-8ba9-f38f6584dd7b.png">
 
+Also at the top of the form you wil find a navigation header where you can skip questions.
+![Screenshot 2023-04-03 at 00 43 31](https://user-images.githubusercontent.com/59873140/229383092-bd5f03af-e70e-4df3-8d4e-2665c2e8516b.png)
+
 #### Progress
- ---- progress bar----
- 
- 
+While you are filling the form you will find at the bottom a progress bar where you can see how far you are.
+![Screenshot 2023-04-03 at 00 39 53](https://user-images.githubusercontent.com/59873140/229383043-0b39d578-85ff-45ed-819b-f63122033039.png)
+
 #### Light/Dark Mode
 --- light/Dark Mood ---- 
 
