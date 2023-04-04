@@ -106,11 +106,12 @@ h2 {
     font-size: 2em;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 form>fieldset>p {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    line-height: 1.5;
 }
 
 button {
@@ -125,13 +126,13 @@ form {
     box-shadow: 4px 4px 10px #4585b6;
 }
 
-@supports (display:grid) {
+/* @supports (display:grid) {
     form {
         display: grid;
         place-items: center;
         width: 100%;
     }
-}
+} */
 
 form>fieldset {
     display: flex;
@@ -235,14 +236,13 @@ textarea:focus {
 
 form section>ul {
     display: flex;
-    align-self: center;
+    justify-content: center;
 }
 
 progress {
     margin-right: 1em;
-    margin-left: 4em;
     border-radius: 7px;
-    width: 450px;
+    width: 80%;
     height: 20px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
