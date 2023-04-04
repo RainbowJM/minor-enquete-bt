@@ -6,23 +6,59 @@
 
 :root {
     --font-type: 'Open Sans', 'Arial', 'Helvatica', sans-serif;
-    --font-size-title: 2em;
-    --font-size: 0.5em;
+    --font-size-title: 2.5em;
+    --font-size: 0.8em;
 
-    --background-color: #87C8FB;
-    --blue-color: #2083cf;
-    --button-color: #62BAFF;
-    --text-color: #2ea4ff;
+    --background-color: white;
+    --form-background-color: #f76faf;
+    
+    --button-color: #e24b92;
+    --shadow-color: #300118;
+    --title-color: #500a2c;
+    --text-color: black;
+    --fieldset-color: #f42086;
+    --select-background-color: #e16ca3;
+    --input-background: #884373;
 
     --valid: green;
     --invalid: red;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --font-type: 'Open Sans', 'Arial', 'Helvatica', sans-serif;
+        --font-size-title: 2.5em;
+        --font-size: 0.8em;
+
+        --background-color: #500a2c;
+        --form-background-color: #b02f6b;
+        --button-color: #e16ca3;
+        --shadow-color: #300118;
+        --title-color: rgb(252, 214, 220);
+        --text-color: black;
+        --fieldset-color: #500A2C;
+        --select-background-color: #e16ca3;
+        --input-background: #884373;
+
+        --valid: rgb(5, 237, 5);
+        --invalid: rgb(255, 0, 0);
+    }
+
+}
+
 body {
-    background-color: white;
+    background-color: var(--background-color);
     font-family: var(--font-type);
     font-weight: 400;
     margin: 1em;
+}
+
+p {
+    color: var(--text-color);
+}
+
+label {
+    color: var(--text-color);
 }
 
 header {
@@ -41,7 +77,7 @@ header section {
 header a:hover,
 header a:focus-within {
     outline: 0;
-    border: 2px inset var(--text-color);
+    border: 2px inset var(--title-color);
 }
 
 nav {
@@ -50,7 +86,7 @@ nav {
 }
 
 header nav ol {
-    font-size: 0.65em;
+    font-size: 1.5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -58,21 +94,25 @@ header nav ol {
     gap: 0.3em;
 }
 
+header nav ol a {
+    color: var(--title-color);
+}
 
 main {
     width: 100%;
 }
 
 fieldset {
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--fieldset-color);
 }
 
 textarea {
     width: 100%;
     border: none;
     border-radius: 4px;
-    background-color: #f8f8f86a;
+    background-color: #f8f8f892;
     font-size: 16px;
+    color: var(--text-color);
 }
 
 li {
@@ -89,7 +129,7 @@ legend {
     font-weight: bold;
     font-size: clamp(1em, 2vw, 2em);
     margin-bottom: .5em;
-    color: black;
+    color: var(--title-color);
     font-size: 1.5em;
     margin-left: .1em;
 }
@@ -98,11 +138,11 @@ select {
     font-size: 14px;
     border: none;
     border-radius: 5px;
-    background: var(--text-color);
+    background: var(--select-background-color);
 }
 
 h2 {
-    color: var(--text-color);
+    color: var(--title-color);
     font-size: 2em;
     display: flex;
     justify-content: center;
@@ -121,18 +161,10 @@ button {
 form {
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
+    background-color: var(--form-background-color);
     border-radius: 2em;
-    box-shadow: 4px 4px 10px #4585b6;
+    box-shadow: 4px 4px 10px var(--shadow-color);
 }
-
-/* @supports (display:grid) {
-    form {
-        display: grid;
-        place-items: center;
-        width: 100%;
-    }
-} */
 
 form>fieldset {
     display: flex;
@@ -159,12 +191,13 @@ form>fieldset {
     font-weight: bold;
 }
 
-input {
+/* input {
     background-color: white;
-}
+} */
 
 input[type="text"] {
     padding: 1em;
+    background-color: var(--input-background);
 }
 
 input[type="radio"] {
@@ -191,6 +224,7 @@ form>fieldset>fieldset:nth-of-type(n+2) ul li label {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-color);
 }
 
 form>fieldset>fieldset:nth-of-type(n+2) span {
@@ -214,6 +248,7 @@ label[for="email"] {
 input[type="tel"],
 input[type="email"] {
     padding: 1em;
+    background-color: var(--input-background);
 }
 
 input[type="email"]:invalid,
@@ -230,13 +265,18 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     outline-style: inset;
-    outline-color: var(--text-color);
+    outline-color: var(--title-color);
     outline-width: 3px;
 }
 
 form section>ul {
     display: flex;
     justify-content: center;
+}
+
+a.current {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 progress {
@@ -253,7 +293,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background-color: var(--text-color);
+    background-color: var(--background-color);
     border-radius: 7px;
 }
 
@@ -274,8 +314,8 @@ button:hover,
 button:focus {
     outline-style: inset;
     outline-width: 3px;
-    outline-color: var(--text-color);
-    color: var(--blue-color);
+    outline-color: var(--title-color);
+    color: var(--text-color);
     cursor: pointer;
 }
 
@@ -283,7 +323,6 @@ a.previous {
     display: inline-block;
     padding: 1em 1.5em;
     color: black;
-    border: 1px solid var(--button-color);
     background-color: var(--button-color);
     text-decoration: none;
     font-family: var(--font-type);
@@ -293,8 +332,8 @@ a.previous:hover,
 a.previous:focus {
     outline-style: inset;
     outline-width: 3px;
-    outline-color: var(--text-color);
-    color: var(--blue-color);
+    outline-color: var(--title-color);
+    color: var(--text-color);
     opacity: 1;
 }
 
