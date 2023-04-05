@@ -455,11 +455,67 @@ It ignores my color pallete
 
 ### PrinceXML
 PrinceXML is a browser where you can convert HTML pages and CSS into a PDF file. 
-## Layer
+![Screenshot 2023-04-05 at 20 40 23](https://user-images.githubusercontent.com/59873140/230174635-2310166b-f433-426f-aae1-d744e5e1d371.png)
+
+You add your HTML file
+![Screenshot 2023-04-05 at 20 40 43](https://user-images.githubusercontent.com/59873140/230174726-949b141e-3713-47f7-8c00-4d6afa282843.png)
+
+Then you add your css file
+![Screenshot 2023-04-05 at 20 41 15](https://user-images.githubusercontent.com/59873140/230174832-8157df32-c663-419e-a416-ec022bf446c3.png)
+
+If you havve other files you add them 
+![Screenshot 2023-04-05 at 20 41 46](https://user-images.githubusercontent.com/59873140/230174938-c4587a78-2dac-42c4-8d04-73048b9bc4b4.png)
+
+And the it will generate the `pdf` file for you.
+
+But it doesn't support everything:
+```prince: script/app.js: error: can't open input file: No such file or directory
+prince: style.css:27: warning: unknown media feature 'prefers-color-scheme'
+prince: style.css:122: warning: unknown pseudo-element '::placeholder'
+prince: style.css:225: warning: unknown pseudo-element '::placeholder'
+prince: style.css: warning: unsupported properties: gap
+```
+## Layers
+The final product consist of 3 layers. 
+The core functionalities of the form are that the user can enter and submit their information, but also the user needs to know what they entered wrong and right so form validation and gives feedback. 
+
+### Functional layer
+In the functional layer, you have the semantic HTML structure. For a form, you have to use the form tag. To fill in data you use the input element. Every part of the form that has something to do with each other goes into a fieldset.
+
+In the functional layer you can validate the input of the user. In the HTML you have to use the correct input types. like, email, nummer,text and give it a pattern. And this is also important for screen readers.
+
+### Usuable layer
+In the usuable layer is more about the design patterns that was used. 
+For form, the labels should be under each other otherwise you have to scan a lot with your eyes. 
+Then I considered consistency, for example all buttons have the same shape and color, input fields have the same color. 
+All pages are the same etc.
+
+In this layer came the progressive enhancement, the formatting. From a normal html page to a nice formatted pages.
+
+- Color added with separate color for dark and light mode
+- Custom fonts added above the system fonts
+- Invisible radio buttons
+- Different `:focus`, `:hover` state
+- CSS form validation with `:valid` and `:invalid` 
+- Give error message with `::after`
+- Form can also be completed with smaller screens
+
+### Pleasureble layer
+This is the part where users get a good feeling when he uses the site. 
+Usually the site is very beautiful, with lots of animation and transitions. 
+Javascript is an enhancement. Because with javascript, users can save data in the form and fill it in further later. 
+Also, there are more personalized feedback sent to the users.
+
+- Javascript form validation
+- Feedback 
+- Data are stored with LocalStorage
 
 ## Nice to have
 ### Feature
 - [ ] Fill the enquête as anonouymous
+- [ ] Better transation between pages
+- [ ] Server for the application
+
 ### Source
 - [Principes](https://www.w3.org/DesignIssues/Principles.html)
 - [Het web is voor iedereen](https://www.youtube.com/watch?v=UMNFehJIi0E)
