@@ -8,10 +8,19 @@
     - [Questions](#questions)
     - [Features](#features)
     - [Core](#core)
+        - [Funtionalities](#functionalities)
     - [Requirements](#requirements)
-    - [Browser](#browser)
+        - [Questions](#questions)
+        - [Validation](#validation)
+        - [LocalStorage](#local-storage)
+        - [Navigation](#navigation)
+        - [Progress](#progress)
+        - [Radio Buttons](#radio-buttons)
+        - [Light/Dark](#lightdark-mode)
     - [Test](#test)
-    - [Layer](#layer)
+        - [Progressive enhancement](#progressive-enhancement)
+    - [Browser](#browser)
+    - [Layer](#layers)
     - [Nice to have](#nice-to-have)
     - [Source](#source)
 ---
@@ -377,7 +386,8 @@ Also you have `tabindex`
                     <li><a aria-label="Human centered design" href="./hcd.html">6</a></li>
                     <li><a aria-label="Meesterproef" href="./mp.html">7</a></li>
                     <li><a aria-label="Weekly Nerd" class="current" href="./wn.html">8</a></li>
-          ```
+```
+
 ![Screenshot 2023-04-05 at 15 01 35](https://user-images.githubusercontent.com/59873140/230169884-5d90402a-33dd-4f7e-bb82-e606365164f2.png)
 
 ![Screenshot 2023-04-05 at 15 06 26](https://user-images.githubusercontent.com/59873140/230169944-4305de91-ac77-451d-be1e-18f9d5ffd25f.png)
