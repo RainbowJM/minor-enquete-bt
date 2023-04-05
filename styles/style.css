@@ -18,6 +18,7 @@
     --fieldset-color: #f42086;
     --select-background-color: #e16ca3;
     --input-background: #ffffff;
+    --progress-bar-moz: #500a2c;
 
     --valid: green;
     --invalid: red;
@@ -38,6 +39,7 @@
         --fieldset-color: #500A2C;
         --select-background-color: #e16ca3;
         --input-background: #884373;
+        --progress-bar-moz: #500a2c;
 
         --valid: rgb(5, 237, 5);
         --invalid: rgb(255, 0, 0);
@@ -308,7 +310,7 @@ progress::-webkit-progress-value {
 }
 
 progress::-moz-progress-bar {
-    background-color: var(--text-color);
+    background-color: var(--progress-bar-moz);
     border-radius: 7px;
 }
 
