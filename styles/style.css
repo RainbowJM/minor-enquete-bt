@@ -7,18 +7,17 @@
 :root {
     --font-type: 'Open Sans', 'Arial', 'Helvatica', sans-serif;
     --font-size-title: 2.5em;
-    --font-size: 0.8em;
 
     --background-color: white;
     --form-background-color: #f76faf;
-    
+
     --button-color: #e24b92;
     --shadow-color: #300118;
     --title-color: #500a2c;
     --text-color: black;
     --fieldset-color: #f42086;
     --select-background-color: #e16ca3;
-    --input-background: #884373;
+    --input-background: #ffffff;
 
     --valid: green;
     --invalid: red;
@@ -35,7 +34,7 @@
         --button-color: #e16ca3;
         --shadow-color: #300118;
         --title-color: rgb(252, 214, 220);
-        --text-color: black;
+        --text-color: white;
         --fieldset-color: #500A2C;
         --select-background-color: #e16ca3;
         --input-background: #884373;
@@ -53,12 +52,15 @@ body {
     margin: 1em;
 }
 
-p {
-    color: var(--text-color);
-}
-
+p,
 label {
     color: var(--text-color);
+    font-size: 1em;
+}
+
+p.answer {
+    font-weight: bold;
+    font-style: italic;
 }
 
 header {
@@ -115,6 +117,10 @@ textarea {
     color: var(--text-color);
 }
 
+textarea::placeholder{
+    color: black;
+}
+
 li {
     list-style: none;
 }
@@ -147,6 +153,7 @@ h2 {
     display: flex;
     justify-content: center;
     text-align: center;
+    font-family: 'Calligraffitti', sans-serif;
 }
 
 form>fieldset>p {
@@ -184,16 +191,12 @@ form>fieldset {
 }
 
 #general label input[type="text"]:valid+span::after {
-    content: 'Nice! You did it!';
+    content: 'Nice!';
     position: absolute;
     transform: translateY(.5em);
     font-size: 14px;
     font-weight: bold;
 }
-
-/* input {
-    background-color: white;
-} */
 
 input[type="text"] {
     padding: 1em;
@@ -213,6 +216,7 @@ input:checked+span {
 
 input::placeholder {
     font-family: var(--font-type);
+    color: black;
 }
 
 form>fieldset>fieldset:nth-of-type(n+2) ul {
@@ -321,7 +325,7 @@ button:focus {
 
 a.previous {
     display: inline-block;
-    padding: 1em 1.5em;
+    padding: 1.08em 1.5em;
     color: black;
     background-color: var(--button-color);
     text-decoration: none;
