@@ -155,7 +155,7 @@ h2 {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-family: 'Calligraffitti', sans-serif;
+    font-family: 'Calligraffitti', 'Open Sans', 'Arial', 'Helvatica', sans-serif;
 }
 
 form>fieldset>p {
