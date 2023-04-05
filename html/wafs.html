@@ -16,15 +16,15 @@
         <section>
             <nav>
                 <ol>
-                    <li><a href="../index.html">General</a></li>
-                    <li><a class="current" href="./wafs.html"> 1</a></li>
-                    <li><a href="./cssttr.html"> 2</a></li>
-                    <li><a href="./bt.html"> 3</a></li>
-                    <li><a href="./pwa.html"> 4</a></li>
-                    <li><a href="./rtw.html"> 5</a></li>
-                    <li><a href="./hcd.html"> 6</a></li>
-                    <li><a href="./mp.html"> 7</a></li>
-                    <li><a href="./wn.html"> 8</a></li>
+                    <li><a aria-label="Home" href="../index.html">General</a></li>
+                    <li><a aria-label="Web app from scratch" class="current" href="./wafs.html">1</a></li>
+                    <li><a aria-label="CSS to the rescue" href="./cssttr.html">2</a></li>
+                    <li><a aria-label="Browser technologies" href="./bt.html">3</a></li>
+                    <li><a aria-label="Progressive web app" href="./pwa.html">4</a></li>
+                    <li><a aria-label="Real time web" href="./rtw.html">5</a></li>
+                    <li><a aria-label="Human centered design" href="./hcd.html">6</a></li>
+                    <li><a aria-label="Meesterproef" href="./mp.html">7</a></li>
+                    <li><a aria-label="Weekly Nerd" href="./wn.html">8</a></li>
                 </ol>
             </nav>
         </section>
@@ -62,7 +62,7 @@
 
                 <fieldset>
                     <legend>Curriculum</legend>
-                    <p tabindex="0">What number would you give the difficulty of the curriculum?</p>
+                    <p tabindex="0">What score would you give the difficulty of the curriculum?</p>
                     <ul>
                         <li><label><input required type="radio" name="wafs-curriculum" value="1"><span>1</span></label>
                         </li>
@@ -85,7 +85,7 @@
 
                 <fieldset>
                     <legend>Curriculum Explanation</legend>
-                    <p tabindex="0">What number would you give curriculum explanation?</p>
+                    <p tabindex="0">What score would you give curriculum explanation?</p>
                     <ul>
                         <li><label><input required type="radio" name="wafs-curriculum-explanation"
                                     value="1"><span>1</span></label></li>
@@ -108,6 +108,7 @@
                         <li><label><input type="radio" name="wafs-curriculum-explanation"
                                     value="10"><span>10</span></label></li>
                     </ul>
+                    <p id="question-5"></p>
                 </fieldset>
 
                 <fieldset>
@@ -126,6 +127,7 @@
                         <li><label><input type="radio" name="wafs-insight" value="9"><span>9</span></label></li>
                         <li><label><input type="radio" name="wafs-insight" value="10"><span>10</span></label></li>
                     </ul>
+                    <p id="question-6"></p>
                 </fieldset>
                 <label for="progressbar"><progress class="progress" id="progressbar" value="20" max="100"></progress>20%</label>
             </fieldset>

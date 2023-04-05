@@ -16,15 +16,15 @@
         <section>
             <nav>
                 <ol>
-                    <li><a href="../index.html">General</a></li>
-                    <li><a href="./wafs.html"> 1</a></li>
-                    <li><a href="./cssttr.html"> 2</a></li>
-                    <li><a href="./bt.html"> 3</a></li>
-                    <li><a href="./pwa.html"> 4</a></li>
-                    <li><a href="./rtw.html"> 5</a></li>
-                    <li><a class="current" href="./hcd.html"> 6</a></li>
-                    <li><a href="./mp.html"> 7</a></li>
-                    <li><a href="./wn.html"> 8</a></li>
+                    <li><a aria-label="Home" href="../index.html">General</a></li>
+                    <li><a aria-label="Web app from scratch" href="./wafs.html">1</a></li>
+                    <li><a aria-label="CSS to the rescue" href="./cssttr.html">2</a></li>
+                    <li><a aria-label="Browser technologies" href="./bt.html">3</a></li>
+                    <li><a aria-label="Progressive web app" href="./pwa.html">4</a></li>
+                    <li><a aria-label="Real time web" href="./rtw.html">5</a></li>
+                    <li><a aria-label="Human centered design" class="current" href="./hcd.html">6</a></li>
+                    <li><a aria-label="Meesterproef" href="./mp.html">7</a></li>
+                    <li><a aria-label="Weekly Nerd" href="./wn.html">8</a></li>
                 </ol>
             </nav>
         </section>
@@ -62,7 +62,7 @@
 
                 <fieldset>
                     <legend>Curriculum</legend>
-                    <p tabindex="0">What number would you give the difficulty of the curriculum?</p>
+                    <p tabindex="0">What score would you give the difficulty of the curriculum?</p>
                     <ul>
                         <li><label><input required type="radio" name="hcd-curriculum" value="1"><span>1</span></label></li>
                         <li><label><input type="radio" name="hcd-curriculum" value="2"><span>2</span></label></li>
@@ -75,6 +75,7 @@
                         <li><label><input type="radio" name="hcd-curriculum" value="9"><span>9</span></label></li>
                         <li><label><input type="radio" name="hcd-curriculum" value="10"><span>10</span></label></li>
                     </ul>
+                    <p id="question-3"></p>
                     <br>
                     <label for="question-4">Give you opinion about the course:</label><br>
                     <textarea name="hcd-opinion" id="question-4" cols="80" rows="5" placeholder="Write here your opinion.."></textarea>
@@ -82,7 +83,7 @@
 
                 <fieldset>
                     <legend>Curriculum Explanation</legend>
-                    <p tabindex="0">What number would you give curriculum explanation?</p>
+                    <p tabindex="0">What score would you give curriculum explanation?</p>
                     <ul>
                         <li><label><input required type="radio" name="hcd-curriculum-explanation" value="1"><span>1</span></label></li>
                         <li><label><input type="radio" name="hcd-curriculum-explanation" value="2"><span>2</span></label></li>
@@ -95,6 +96,7 @@
                         <li><label><input type="radio" name="hcd-curriculum-explanation" value="9"><span>9</span></label></li>
                         <li><label><input type="radio" name="hcd-curriculum-explanation" value="10"><span>10</span></label></li>
                     </ul>
+                    <p id="question-5"></p>
                 </fieldset>
 
                 <fieldset>
@@ -112,6 +114,7 @@
                         <li><label><input type="radio" name="hcd-insight" value="9"><span>9</span></label></li>
                         <li><label><input type="radio" name="hcd-insight" value="10"><span>10</span></label></li>
                     </ul>
+                    <p id="question-6"></p>
                 </fieldset>
                 <label for="progressbar"><progress class="progress" id="progressbar" value="70" max="100"></progress>70%</label>
             </fieldset>

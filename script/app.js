@@ -2,7 +2,10 @@ const inputs = document.querySelectorAll("input[type='text'], input[type='email'
 const inputRadios = document.querySelectorAll("input[type='radio']");
 const question_1 = document.getElementById("question-1");
 const question_2 = document.getElementById("question-2");
+const question_3 = document.querySelector("#question-3");
 const inputTextarea = document.getElementById("question-4");
+const question_5 = document.querySelector("#question-5");
+const question_6 = document.querySelector("#question-6");
 
 loadInput();
 loadRadioValue();
@@ -60,7 +63,7 @@ function loadValueOfSelect(input) {
     }
 }
 
-function saveRadioValue(){
+function saveRadioValue() {
     inputRadios.forEach(radio => {
         const radioName = radio.name;
         const radioValue = radio.value;
@@ -96,15 +99,83 @@ function loadValueTextarea() {
 
 inputRadios.forEach(button => {
     button.addEventListener('change', () => {
-        const RadioName = button.name;
-        const RadioValue = button.value;
+        const radioName = button.name;
+        const radioValue = button.value;
 
         if (button.checked) {
-            switch (RadioName) {
-                case 'wafs-curriculum':
-                    document.querySelector('#question-3').innerHTML = `Score: ${RadioValue}`
+            switch (radioName) {
+                case "wafs-curriculum":
+                    question_3.innerHTML = `Score: ${radioValue}`;
                     break;
-                    
+                case "wafs-curriculum-explanation":
+                    question_5.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "wafs-insight":
+                    question_6.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "cssttr-curriculum":
+                    question_3.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "cssttr-curriculum-explanation":
+                    question_5.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "cssttr-insight":
+                    question_6.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "bt-curriculum":
+                    question_3.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "bt-curriculum-explanation":
+                    question_5.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "bt-insight":
+                    question_6.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "pwa-curriculum":
+                    question_3.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "pwa-curriculum-explanation":
+                    question_5.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "pwa-insight":
+                    question_6.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "rtw-curriculum":
+                    question_3.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "rtw-curriculum-explanation":
+                    question_5.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "rtw-insight":
+                    question_6.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "hcd-curriculum":
+                    question_3.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "hcd-curriculum-explanation":
+                    question_5.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "hcd-insight":
+                    question_6.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "mp-curriculum":
+                    question_3.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "mp-curriculum-explanation":
+                    question_5.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "mp-insight":
+                    question_6.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "wn-curriculum":
+                    question_3.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "wn-curriculum-explanation":
+                    question_5.innerHTML = `Score: ${radioValue}`;
+                    break;
+                case "wn-insight":
+                    question_6.innerHTML = `Score: ${radioValue}`;
+                    break;
                 default:
                     break;
             }
