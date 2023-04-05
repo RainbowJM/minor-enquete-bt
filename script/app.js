@@ -29,71 +29,87 @@ if (question_1 && question_2) {
 }
 
 function saveInput() {
-    inputs.forEach(input => {
-        const inputName = input.name;
-        const inputValue = input.value;
-        localStorage.setItem(inputName, inputValue);
-    });
+    if (localStorage) {
+        inputs.forEach(input => {
+            const inputName = input.name;
+            const inputValue = input.value;
+            localStorage.setItem(inputName, inputValue);
+        });
+    }
 }
 
 function loadInput() {
-    inputs.forEach(input => {
-        const inputName = input.name;
-        let storedValue = localStorage.getItem(inputName);
-        if (storedValue) {
-            input.value = storedValue
-        }
-    });
+    if (localStorage) {
+        inputs.forEach(input => {
+            const inputName = input.name;
+            let storedValue = localStorage.getItem(inputName);
+            if (storedValue) {
+                input.value = storedValue
+            }
+        });
+    }
 }
 
 function saveValueOfSelect(input) {
-    input.addEventListener('change', function () {
-        const selectName = this.name;
-        const selectValue = this.value
-        localStorage.setItem(selectName, selectValue);
-    })
+    if (localStorage) {
+        input.addEventListener('change', function () {
+            const selectName = this.name;
+            const selectValue = this.value
+            localStorage.setItem(selectName, selectValue);
+        });
+    }
 }
 
 function loadValueOfSelect(input) {
-    const selectName = input.name;
-    let storedSelectValue = localStorage.getItem(selectName);
+    if (localStorage) {
+        const selectName = input.name;
+        let storedSelectValue = localStorage.getItem(selectName);
 
-    if (storedSelectValue) {
-        input.value = storedSelectValue
+        if (storedSelectValue) {
+            input.value = storedSelectValue;
+        }
     }
 }
 
 function saveRadioValue() {
-    inputRadios.forEach(radio => {
-        const radioName = radio.name;
-        const radioValue = radio.value;
-        if (radio.checked) {
-            localStorage.setItem(radioName, radioValue)
-        }
-    });
+    if (localStorage) {
+        inputRadios.forEach(radio => {
+            const radioName = radio.name;
+            const radioValue = radio.value;
+            if (radio.checked) {
+                localStorage.setItem(radioName, radioValue)
+            }
+        });
+    }
 }
 
 function loadRadioValue() {
-    inputRadios.forEach(input => {
-        const radioName = input.name;
-        let storedValue = localStorage.getItem(radioName);
-        if (storedValue && input.value === storedValue) {
-            input.checked = true;
-        }
-    });
+    if (localStorage) {
+        inputRadios.forEach(input => {
+            const radioName = input.name;
+            let storedValue = localStorage.getItem(radioName);
+            if (storedValue && input.value === storedValue) {
+                input.checked = true;
+            }
+        });
+    }
 }
 
 function saveValueTextarea() {
-    const textareaName = inputTextarea.name;
-    const textareaValue = inputTextarea.value;
-    localStorage.setItem(textareaName, textareaValue);
+    if (localStorage) {
+        const textareaName = inputTextarea.name;
+        const textareaValue = inputTextarea.value;
+        localStorage.setItem(textareaName, textareaValue);
+    }
 }
 
 function loadValueTextarea() {
-    const textareaName = inputTextarea.name;
-    let storedValue = localStorage.getItem(textareaName);
-    if (storedValue) {
-        inputTextarea.value = storedValue;
+    if (localStorage) {
+        const textareaName = inputTextarea.name;
+        let storedValue = localStorage.getItem(textareaName);
+        if (storedValue) {
+            inputTextarea.value = storedValue;
+        }
     }
 }
 
