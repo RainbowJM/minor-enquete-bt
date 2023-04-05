@@ -180,6 +180,10 @@ form>fieldset {
     margin: 1em .5em;
     border: transparent;
 }
+#question-3{
+    margin-top: .5em;
+    font-style: italic;
+}
 
 #general {
     display: flex;

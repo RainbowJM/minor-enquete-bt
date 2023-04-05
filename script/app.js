@@ -93,3 +93,21 @@ function loadValueTextarea() {
         inputTextarea.value = storedValue;
     }
 }
+
+inputRadios.forEach(button => {
+    button.addEventListener('change', () => {
+        const RadioName = button.name;
+        const RadioValue = button.value;
+
+        if (button.checked) {
+            switch (RadioName) {
+                case 'wafs-curriculum':
+                    document.querySelector('#question-3').innerHTML = `Score: ${RadioValue}`
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+    });
+});
